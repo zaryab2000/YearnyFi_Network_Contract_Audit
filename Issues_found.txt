@@ -1,0 +1,26 @@
+Majorsss:
+Line 45 - Redundant fallback function 
+Details:
+The payment rejection fallback is redundant.
+
+Contracts should reject unexpected payments. Before Solidity 0.4.0, it was done manually:
+
+
+function () { revert(); }
+
+Starting from Solidity 0.4.0, contracts without a fallback function automatically revert payments, making the code above redundant.
+
+
+Minorsss:
+1. Prefer External Visibility for following
+* Line 49
+* Line 53,
+* Line 68,
+* Line 83,
+* Line 95,
+* Line 111,
+* Line 131,
+
+
+2. Require Statements include no error messages
+ 
